@@ -1,13 +1,10 @@
-# SCEditors
-
-Initialise the editors once working with synths and patterns for experimenting with values.
-
-```javascript
-
-/* Install the editors */
+///////////////////////////////////////////////////////////////
+//
+//                   SCEditors, Examples
+//
+///////////////////////////////////////////////////////////////
 
 Quarks.install("https://github.com/bjarnig/SCEditors")
-
 
 ///////////////////////  SynthDesignerUI //////////////////////
 
@@ -124,5 +121,3 @@ patterns["rhythm2"] = r; patterns["noise2"] = q; patterns["drone2"] = t;
 PatternLauncherUI(patterns);
 
 )
-
-```

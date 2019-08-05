@@ -49,8 +49,7 @@ PatternInteractionUI {
 		Pen.lineTo(470@lowLine);
 		Pen.stroke;
 	};
-
-
+	
     // SynthDef controls & interface components
 
     addControls = {|isSource|
@@ -75,7 +74,6 @@ PatternInteractionUI {
 			var mapped = spec[1].map(ez.value);
 			arguments[spec[0]] = mapped;
 			numberBox.value = mapped;
-			// if(isPlaying, { sourceSynth.set(spec[0], mapped) });
 		};
 
 		randButton = Button(win, Rect(330, y + 2, 50, 30));
@@ -84,13 +82,6 @@ PatternInteractionUI {
 			["on", textColor, secondaryColor, ],
 			["off", secondaryColor, textColor ]];
 		randButtons[spec[0]] = randButton;
-
-		// patternButton = Button(win, Rect(395, y + 2, 70, 30));
-		// patternButton.font =Font(font, 12);
-		// patternButton.states = [
-		// 	["include", textColor, secondaryColor, ],
-		// 	["exclude", secondaryColor, textColor ]];
-		// patternButtons[spec[0]] = patternButton;
 
 		numberBox = NumberBox(win, Rect(390, y + 2, 70, 30));
 		numberBox.font =Font(font, 13);
@@ -130,8 +121,6 @@ PatternInteractionUI {
     play.states = [["Play Note", Color.black, textColor], ["Stop", Color.black, textColor]];
 	play.font =Font(font, 11);
 	playAction = {|val|
-		// var params = getSliderArgs.value();
-		// params.postcs;
         if (val == 1, {
 			isPlaying = true;
 			currentPattern = pattern.play;
@@ -174,7 +163,6 @@ PatternInteractionUI {
 					slider.value = number;
 					numberBox.value = mappedNumber;
 					arguments[key] = mappedNumber;
-					// if(isPlaying, { sourceSynth.set(key, mappedNumber) })
 				})
 			};
 	};

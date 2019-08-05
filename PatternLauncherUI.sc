@@ -1,6 +1,6 @@
 PatternLauncherUI {
 
-	*new {|patterns, slots=12, clock|
+	*new {|patterns, slots=8, clock|
 		^super.new.display(patterns, slots, clock)
 	}
 
@@ -39,9 +39,9 @@ PatternLauncherUI {
 	};
 
 	// Add the window
-	win = Window.new("- Pattern Launcher -", Rect(20, 200, 1150, 550), scroll: false);
+	win = Window.new("- Pattern Launcher -", Rect(20, 200, patternList.size * 100, 450), scroll: false);
 	win.front;
-	win.background = Color.fromHexString("#1e1e1e");
+	win.background = Color.fromHexString("#071E22");
 	win.alpha = alpha;
 	win.drawFunc = {
 		Pen.strokeColor = Color.white;
@@ -115,32 +115,5 @@ PatternLauncherUI {
 		};
 	};
 
-	// MIDI handling ..
-
-	/*MIDIClient.init;
-		MIDIIn.connectAll;
-		stateButtons[0].value = 1;
-
-		MIDIFunc.noteOn({|...args| args.postln;
-		defer {
-			if((currentIndex + 1) < slotCount, {currentIndex = currentIndex + 1});
-			stateButtons.do{|btn| btn.value = 0};
-			stateButtons[currentIndex].value = 1;
-		};
-		}, 25);
-
-		MIDIFunc.noteOn({|...args| args.postln;
-		defer {
-			if(currentIndex > 0, {currentIndex = currentIndex - 1});
-			stateButtons.do{|btn| btn.value = 0};
-			stateButtons[currentIndex].value = 1;
-		};
-		}, 26);*/
 	}
 }
-
-/*
-
-
-
-*/
