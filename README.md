@@ -8,8 +8,11 @@ Initialise the editors once working with synths and patterns for experimenting w
 
 Quarks.install("https://github.com/bjarnig/SCEditors")
 
+```
+
 ![alt text](https://bjarnig.s3.eu-central-1.amazonaws.com/images/sceditors.jpg)
 
+```javascript
 
 ///////////////////////  SynthDesignerUI //////////////////////
 
