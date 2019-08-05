@@ -1,6 +1,6 @@
 # SCEditors
 
-Initialise the editors once working with synths and patterns for experimenting with values.
+GRaphical editors for working with synths and patterns and experimenting with values.
 
 ```javascript
 
